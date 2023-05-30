@@ -348,7 +348,7 @@ header .icono #Menu {
     margin: auto;
     padding: 60px 0;
     height: 50vh;
-    background-image: linear-gradient(to top, rgba(75, 59, 68, 0.527) 0%, rgba(54, 42, 51, 0.5) 100%), url(../image/liston2.png);
+    background-image: linear-gradient(to top, rgba(75, 59, 68, 0.527) 0%, rgba(54, 42, 51, 0.5) 100%), url(../image/herramienta_fondo);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
