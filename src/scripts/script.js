@@ -1,12 +1,12 @@
-let  menu = document.querySelector('#Menu');
-let  navegador = document.querySelector('.navegador');
+let  menu = document.querySelector('#Menu'); //What?
+let  navegador = document.querySelector('.nav-links');
 
 menu.onclick = () => {
     menu.classList.toggle('fa-times');
-    navegador.classList.toggle('activo');
+    navegador.classList.toggle('active');
 }
 
-var swiper = new Swiper(".inicio-slider", {
+var swiper = new Swiper(".carousel", {
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
@@ -19,4 +19,3 @@ var swiper = new Swiper(".inicio-slider", {
     },
     loop:true,
   });
-
