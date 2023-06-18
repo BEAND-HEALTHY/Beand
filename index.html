@@ -22,303 +22,140 @@
 
 <body>
 
-    <!--Seccion cabecera-->
 
+    <!--Header-->
     <header>
-        <a href="#" class="logo"><img src="image/logo.png" alt="logo de la marca"></a>
-        <nav class="navegador">
-            <a class="activo" href="#Inicio">INICIO</a>
-            <a href="#Especialistas">ESPECIALISTAS</a>
-            <a href="#Herramientas" id="herramientas">HERRAMIENTAS</a>
-            <a href="#Recetas">RECETAS</a>
-            <a href="#Precio">PRECIOS</a>
+        <nav class="top-nav">
+            <a href="#">
+                <img class="logo" src="assets/images/logo.png" alt="logo Beand">
+            </a>
+            <ul class="nav-links">
+                <li><a class="active" href="#">INICIO</a></li>
+                <li><a href="#Especialistas">ESPECIALISTAS</a></li>
+                <li><a href="#Herramientas" id="herramientas">HERRAMIENTAS</a></li>
+                <li><a href="#Recetas">RECETAS</a></li>
+                <li><a href="#Precio">PRECIOS</a></li>
+            </ul>
+            <button class="login-button">INICIAR SESIÓN</button>
         </nav>
-        <div class="icono">
-            <button class="btn_inicio" id="btn">INICIA SESIÓN</button>
-            <i class="fa-solid fa-bars" id="Menu"></i>
-        </div>
     </header>
-    <body>
-        
+    <!--Active doesn't change
+    href should be smooth not instant
+    using href="Inicio" doesn't work because of Jank padding used on Carousel-->
 
-    <!--Seccion inicio-->
-    <section class="Inicio" id="Inicio">
-        <div class="swiper inicio-slider">
-            <div class="swiper-wrapper wrapper">
-                <div class="swiper-slide slider">
-                    <div class="content">
-                        <h3>La nutrición adecuada es la base de una vida saludable y feliz</h3>
-                        <p> En nuestra plataforma BEAND, estamos comprometidos a <br>
-                            ayudarte en alcanzar tus objetivos y sentirme mejor contigo mismo. </p>
-                        <span>!Juntos podemos hacer que tu salud sea una prioridad!</span>
-                        <br>
-                        <a href="#" class="btn_comienza">COMIENZA YA</a>
-                    </div>
-                    <div class="img-1">
-                        <img src="image/inicio1.jpg" alt="">
-                    </div>
-                </div>
-                <div class="swiper-slide slider">
-                    <div class="content">
-                        <h3>Arma tu propio plan alimenticio</h3>
-                        <p> Disfruta de nuestra plataforma, donde podras <br>
-                            personalizar tus dietas con recetas saludables, <br>
-                            además de contar con una rutina de actividad física.
-                        </p>
-                        <a href="#" class="btn_comienza">COMIENZA YA</a>
-                    </div>
-                    <div class="img-2">
-                        <img src="image/ejercicio.jpg" alt="">
-                    </div>
-                </div>
-                <div class="swiper-slide slider">
-                    <div class="content">
-                        <h3>!BEAND garantiza que no estaras desamparado <br>
-                            en el proceso de mejora de tu salud!</h3>
-                        <p>Nuestra plataforma será capaz de otorgar al usuario <br>
-                            un plan alimentario y una rutina de entrenamiento físico <br>
-                            acertado a su objetivo personal.
-                        </p>
-                        <br>
-                        <a href="#" class="btn_comienza">COMIENZA YA</a>
-                    </div>
-                    <div class="img-3">
-                        <img src="image/inicio3.jpg" alt="">
-                    </div>
-                </div>
+    <!--Carousel  TODO Implement Swiper-->
+    <div class="swiper carousel" >
+        <div class="slide">
+            <div class="slide-text">
+                <h3>La nutrición adecuada es la base de una vida saludable y feliz</h3>
+                <p> En nuestra plataforma BEAND, estamos comprometidos a 
+                    ayudarte en alcanzar tus objetivos y sentirme mejor contigo mismo.<br>
+                    <b>!Juntos podemos hacer que tu salud sea una prioridad!</b></p>
+                <button class="CTA">COMIENZA YA</button>
             </div>
-            <div class="swiper-pagination"></div>
+            <img class="slide-image" src="assets/images/inicio1.jpg" alt="">
         </div>
+        <div class="slide">
+            <div class="slide-text">
+                <h3>Arma tu propio plan alimenticio</h3>
+                <p> Disfruta de nuestra plataforma, donde podras 
+                    personalizar tus dietas con recetas saludables, 
+                    además de contar con una rutina de actividad física.</p>
+                <button class="CTA">COMIENZA YA</button>
+            </div>
+            <img class="slide-image" src="assets/images/inicio2.jpg" alt="">
+        </div>
+        <div class="slide">
+            <div class="slide-text">
+                <h3>!BEAND garantiza que no estaras desamparado en el proceso 
+                    de cambio de tu estilo de vida y mejora de tu salud!</h3>
+                <p>Nuestra plataforma será capaz de otorgar al usuario 
+                    un plan alimentario y una rutina de entrenamiento físico 
+                    acertado a su objetivo personal.</p>
+                <button class="CTA">COMIENZA YA</button>
+            </div>
+            <img class="slide-image" src="assets/images/inicio3.png" alt="">
+        </div>
+    </div>
 
-    </section>
-    <!--ventajas-->
-    <section class="ventajas" id="ventajas">
-        <h1 class="titulo_recetas_00">Dietas personalizadas – Nutricionistas Online</h1>
-        <div class="items">
-            <div class="ventajas-container">
-                <img src="image/ventaja6.png" alt="">
-                <h3 class="n-ventaja">Dieta personalizada y saludable</h3>
+
+    <!--Site Body-->
+    <section class="shade">
+        <h2>DIETAS PERSONALIZADAS - NUTRICIONISTAS ONLINE</h2>
+        <div class="advantages">
+            <div>
+                <img class="advantages-image" src="assets/images/ventaja6.png">
+                <p>Dieta personalizada y saludable</p>
             </div>
-            <div class="ventajas-container">
-                <img src="image/ventaja5.png" alt="">
-                <h3 class="n-ventaja">Desde cualquier lugar y a tu propio ritmo</h3>
+            <div>
+                <img class="advantages-image" src="assets/images/ventaja5.png">
+                <p>Desde cualquier lugar y a tu propio ritmo</p>
             </div>
-            <div class="ventajas-container">
-                <img src="image/ventaja4.png" alt="">
-                <h3 class="n-ventaja">100.000 clientes satisfechos</h3>
+            <div>
+                <img class="advantages-image" src="assets/images/ventaja4.png">
+                <p>100.000 clientes satisfechos</p>
             </div>
         </div>
     </section>
-    <!--especialistas-->
-    <section class="Especialistas" id="Especialistas">
-        <h1 class="titulo_recetas_01">Variedad de especialistas</h1>
-        <div class="row">
-            <div class="img-4">
-                <img src="image/nutri.png" alt="">
-            </div>
-            <div class="contenido">
-                <h3>Un nutricionista te acompañará durante<br>
-                    todo el proceso, con trucos de <br> coaching y
-                    motivación.</h3>
-                 <p>Con nuestra consulta online, podras realizar 
+    <section  class="shade">
+        <h2>VARIEDAD DE ESPECIALISTAS</h2>
+        <div class="specialists">
+            <img class="specialists-image" src="assets/images/especialistas2.png">
+            <div>
+                <p><b>Un nutricionista te acompañará durante 
+                    todo el proceso, con trucos de coaching y
+                    motivación.</b></p>
+                <p>Con nuestra consulta online, podras realizar 
                     consultas desde cualquier lugar con un nutricionista de manera online 
                     por Skype, meet ,
-                    videollamada whatsapp o por teléfono.
-                 </p>
-                <div class="icons-container">
-                    <div class="icons">
-                        <img src="image/icono1.png" alt="">
-                    </div>
-                    <div class="icons">
-                        <img src="image/icono2.png" alt="">
-                    </div>
-                    <div class="icons">
-                        <img src="image/icono3.png" alt="">
-                    </div>
+                    videollamada whatsapp o por teléfono.</p>
+                <button class="CTA">PRUÉBALO GRATIS</button>
+                <div class="specialists-icons-container">
+                    <img class="specialists-icon" src="assets/images/espe_icono1.png" alt="">
+                    <img class="specialists-icon" src="assets/images/espe_icono2.png" alt="">
+                    <img class="specialists-icon" src="assets/images/espe_icono3.png" alt="">
+                    <img class="specialists-icon" src="assets/images/espe_icono4.png" alt="">
                 </div>
                 <a href="#" class="btn_especialista">PRUÉBALO GRATIS</a>
             </div>
         </div>
     </section>
-    <!--herramientas-->
-    <section class="Herramientas" id="Herramientas">
-        <h1 class="titulo_herramientas">Las herramientas para tus objetivos</h1>
-        <div class="items">
-            <div class="item-container">
-                <img src="image/herramienta1.png" alt="">
-                <h3 class="n-item">Control de progreso</h3>
+
+    <section class="shade">
+        <h2>LAS HERRAMIENTAS PARA TUS OBJETIVOS</h2>
+        <div class="tools">
+            <div>
+                <img class="tools-image" src="assets/images/herramienta1.png" alt="">
+                <p>Control de progreso diario</p>
             </div>
-            <div class="item-container">
-                <img src="image/herramienta2.png" alt="">
-                <h3 class="n-item">Comidas saludables</h3>
+            <div>
+                <img class="tools-image" src="assets/images/herramienta2.png" alt="">
+                <p>Comidas saludables y personalizadas</p>
             </div>
-            <div class="item-container">
-                <img src="image/herramienta3.png" alt="">
-                <h3 class="n-item">Ejercicios mentales</h3>
+            <div>
+                <img class="tools-image" src="assets/images/herramienta3.png" alt="">
+                <p>Ejercicios mentales y corporales</p>
             </div>
         </div>
     </section>
-    <!--recetas-->
-    <section class="Recetas " id="Recetas">
-        <h1 class="titulo_recetas">Prueba nuestras recetas saludables</h1>
-        <div class="objetos">
-            <div class="box-container">
-                <div class="box">
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fa-regular fa-eye"></a>
-                    <img src="image/plato1.png" alt="">
-                    <h3>BRÓCOLI CON VINAGRETA DE HORTALIZAS</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <div class="hora">
-                        <i class="fa-sharp fa-regular fa-clock"></i>
-                        <span>30 minutos</span>
-                    </div>
-                    <div class="calorias">
-                        <i class="fa-solid fa-fire"></i>
-                        <span>593 CAL</span>
-                    </div>
-                </div>
-                <div class="box">
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fa-regular fa-eye"></a>
-                    <img src="image/plato2.png" alt="">
-                    <h3>ABANICO DE CALABACINES AL PARMESANO</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <div class="hora">
-                        <i class="fa-sharp fa-regular fa-clock"></i>
-                        <span>30 minutos</span>
-                    </div>
-                    <div class="calorias">
-                        <i class="fa-solid fa-fire"></i>
-                        <span>593 CAL</span>
-                    </div>
-                </div>
-                <div class="box">
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fa-regular fa-eye"></a>
-                    <img src="image/plato3.png" alt="">
-                    <h3>AGUACATES RELLENOS DE SALMÓN</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <div class="hora">
-                        <i class="fa-sharp fa-regular fa-clock"></i>
-                        <span>30 minutos</span>
-                    </div>
-                    <div class="calorias">
-                        <i class="fa-solid fa-fire"></i>
-                        <span>593 CAL</span>
-                    </div>
-                </div>
+    <section class="shade">
+        <h2>PRUEBA NUESTRAS RECETAS SALUDABLES</h2>
+        <div>
+            <div class="recipes">
+                <img class="recipes-image" src="assets/images/receta1.png" alt="">
+                <img class="recipes-image" src="assets/images/receta2.png" alt="">
+                <img class="recipes-image" src="assets/images/receta3.png" alt="">
             </div>
-            <a href="#" class="btn_recetas">PRUÉBALO GRATIS</a>
+        <button class="recipes-cta CTA">PRUÉBALO GRATIS</button>
+        </div>
+    </section>
+    <section class="shade">
+        <h2>PLANES DE SUSCRIPCIÓN</h2>
+        <div class="tempClass">
+            <img class="temp-image" src="assets/images/tempSub.png" alt="">
         </div>
     </section>
 
-    <!--Precio-->
-
-    <section class="Precio" id="Precio">
-        <h1 class="titulo_recetas">Planes de suscripción</h1>
-        <div class="box_suscripsion">
-            <div class="card-wapper">
-                <div class="info">
-                    <div class="lista">
-                        <br>
-                        <br>
-                        <p>Programa básico de cuerpo completo</p>
-                        <p>Acceso a recetas personalizadas por <br> los nutricionistas</p>
-                        <p>Reservar citas con nutricionistas</p>
-                        <p>Acceso a la comunidad con otros usuarios</p>
-                        <p>Especificaciones dietéticas y alérgicas</p>
-                        <p><span> + </span> 800 recetas saludables</p>
-                        <p>Revisión de progreso durante el día</p>
-                        <p>Planes de comidas personalizadas</p>
-                        <br>
-                    </div>
-                    <div class="mensaje">
-                        <p>Cambia o cancela en cualquier
-                            momento. <br> Con el plan anual no se
-                            te cobrará hasta el <br> final de la
-                            prueba.</p>
-                    </div>
-                </div>
-                <div class="planes1">
-                    <div class="head">
-                        <h2>Free</h2>
-                    </div>
-                    <div class="detalles">
-                        <p class="fa-solid fa-check"></p>
-                        <p class="fa-solid fa-x"></p>
-                        <p class="fa-solid fa-x"></p>
-                        <p class="fa-solid fa-check"></p>
-                        <p class="fa-solid fa-x"></p>
-                        <p class="fa-solid fa-check"></p>
-                        <p class="fa-solid fa-check"></p>
-                        <p class="fa-solid fa-x"></p>
-                    </div>
-                    <div class="card-precio">
-                        <p>Gratis</p>
-                    </div>
-                    <a  href="#" class="btn_precio">Seleccionar plan</a>
-                </div>
-                <div class="planes2">
-                    <div class="head">
-                        <h2 class="recomendar"> Recomendado </h2>
-                        <h2>Premiun</h2>
-                    </div>
-                    <div class="detalles">
-                        <p class="fa-solid fa-check"></p>
-                        <p class="fa-solid fa-check"></p>
-                        <p class="fa-solid fa-check"></p>
-                        <p class="fa-solid fa-check"></p>
-                        <p class="fa-solid fa-check"></p>
-                        <p class="fa-solid fa-check"></p>
-                        <p class="fa-solid fa-check"></p>
-                        <p class="fa-solid fa-check"></p>
-                    </div>
-                    <div class="card-precio">
-                        <p><sup>PEN</sup>70<sub>/anual</sub></p>
-                    </div>
-                    <a  href="#" class="btn_precio">Seleccionar plan</a>
-                </div>
-                <div class="planes3">
-                    <div class="head">
-                        <h2>Basic</h2>
-                    </div>
-                    <div class="detalles">
-                        <p class="fa-solid fa-check"> </p>
-                        <p class="fa-solid fa-check"> </p>
-                        <p class="fa-solid fa-x"> </p>
-                        <p class="fa-solid fa-check"> </p>
-                        <p class="fa-solid fa-check"> </p>
-                        <p class="fa-solid fa-check"></p>
-                        <p class="fa-solid fa-check"></p>
-                        <p class="fa-solid fa-x"></p>
-                    </div>
-                    <div class="card-precio">
-                        <p><sup>PEN</sup>20<sub>/mensual</sub></p>
-                    </div>
-                    <a  href="#" class="btn_precio">Seleccionar plan</a>
-                </div>
-            </div>
-        </div>
-    </section>
     <footer class="footer-content">
         <div class="contactos">
             <div class="contacto-us">
@@ -344,5 +181,4 @@
     <script src="script.js"></script>
     </body>
 </body>
-
 </html>
