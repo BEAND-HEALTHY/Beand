@@ -9,6 +9,9 @@ body{
 h2{
     color: rgb(15, 171, 13);
 }
+h3{
+    font-size: large;
+}
 
 .nutricionistas{
     background-color: rgb(244, 229, 213);
@@ -16,4 +19,23 @@ h2{
 
 .image-especialista{
     max-width: 100px;
+}
+
+.text-herramientas{
+    color:white;
+    font-weight: bold;
+}
+
+.container-herramienta{
+    background-color: rgb(128, 217, 15);
+    border-radius: 100%;
+}
+
+.image-receta{
+    height: 200px;
+}
+
+.card-text{
+    font-size: 12px;
+    font-weight: 100;
 }
