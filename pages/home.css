@@ -36,7 +36,6 @@ body {
 
 html {
   font-size: 62.5%;
-  scroll-padding-top: 5.5rem; /*????*/
   scroll-behavior: smooth;
   background: white;
 }
@@ -73,72 +72,10 @@ p {
 }
 
 /*Header*/
-.top-nav {
-  display: flex;
-  position: fixed;
-  align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box;
 
-  width: 100%;
-  padding: 1em 4em;
-  margin: 0;
-
-  background: white;
-  z-index: 10;
-  box-shadow: var(--box-shadow);
-}
-
-.logo {
-  width: 50px;
-}
-
-.nav-links {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links li {
-  float: left;
-}
-
-.nav-links a {
-  display: block;
-  font-size: 2.5rem;
-  padding: 1.5rem 1.5rem;
-  margin: 0 5px;
-  color: var(--light-color);
-}
-
-.nav-links a.active,
-.nav-links a:hover {
-  color: var(--rosa_intenso);
-  border-bottom: 3px solid var(--rosa_intenso);
-  display: inline-block;
-}
-
-header .login-button {
-  font-size: 19px;
-  font-weight: 400;
-
-  padding: 0.5rem 1.5rem;
-  border-radius: 21px;
-
-  color: var(--rosa_intenso);
-  background: white;
-  border: 1px solid var(--rosa_intenso);
-  width: 170px;
-}
-
-header .login-button:hover {
-  color: white;
-  background: var(--rosa_intenso);
-}
 
 /*CAROUSEL*/
 .carousel {
-  margin-top: 85px;
   height: 450px;
   background-color: #f6c045;
 }

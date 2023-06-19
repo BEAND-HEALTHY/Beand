@@ -1,0 +1,19 @@
+nav{
+    background-color: rgb(248, 239, 235);
+}
+
+nav li{
+    color: rgb(144, 149, 162);
+}
+
+.active{
+    color: rgb(255, 0, 59);
+}
+
+.image-logo{
+    max-width: 70px;
+}
+
+.btn{
+    border-radius: 2em;
+}
