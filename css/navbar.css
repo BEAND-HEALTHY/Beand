@@ -6,7 +6,7 @@ nav li{
     color: rgb(144, 149, 162);
 }
 
-.active{
+nav .active{
     color: rgb(255, 0, 59);
 }
 
