@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>BEAND</title>
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+        crossorigin="anonymous"
+      />
+    </head>
+    <!--link script de diseño-->
+    <link rel="stylesheet" href="pages/home.css" />
+    <link rel="stylesheet" href="components/footer.css">
+  </head>
+
+  <body>
+    <!--Header-->
+    <header>
+      <nav class="top-nav">
+        <a href="#">
+          <img class="logo" src="assets/images/logo.png" alt="logo Beand" />
+        </a>
+        <ul class="nav-links">
+          <li><a class="active" href="#">INICIO</a></li>
+          <li><a href="#Especialistas">ESPECIALISTAS</a></li>
+          <li><a href="#Herramientas" id="herramientas">HERRAMIENTAS</a></li>
+          <li><a href="#Recetas">RECETAS</a></li>
+          <li><a href="#Precio">PRECIOS</a></li>
+        </ul>
+        <button class="login-button">INICIAR SESIÓN</button>
+      </nav>
+    </header>
+    <!--Active doesn't change
+    href should be smooth not instant
+    using href="Inicio" doesn't work because of Jank padding used on Carousel-->
+
+    <!--Carousel  TODO Implement Swiper-->
+    <div class="swiper carousel">
+      <div class="slide">
+        <div class="slide-text">
+          <h3>
+            La nutrición adecuada es la base de una vida saludable y feliz
+          </h3>
+          <p>
+            En nuestra plataforma BEAND, estamos comprometidos a ayudarte en
+            alcanzar tus objetivos y sentirme mejor contigo mismo.<br />
+            <b>!Juntos podemos hacer que tu salud sea una prioridad!</b>
+          </p>
+          <button class="CTA">COMIENZA YA</button>
+        </div>
+        <img class="slide-image" src="assets/images/inicio1.jpg" alt="" />
+      </div>
+      <div class="slide">
+        <div class="slide-text">
+          <h3>Arma tu propio plan alimenticio</h3>
+          <p>
+            Disfruta de nuestra plataforma, donde podras personalizar tus dietas
+            con recetas saludables, además de contar con una rutina de actividad
+            física.
+          </p>
+          <button class="CTA">COMIENZA YA</button>
+        </div>
+        <img class="slide-image" src="assets/images/inicio2.jpg" alt="" />
+      </div>
+      <div class="slide">
+        <div class="slide-text">
+          <h3>
+            !BEAND garantiza que no estaras desamparado en el proceso de cambio
+            de tu estilo de vida y mejora de tu salud!
+          </h3>
+          <p>
+            Nuestra plataforma será capaz de otorgar al usuario un plan
+            alimentario y una rutina de entrenamiento físico acertado a su
+            objetivo personal.
+          </p>
+          <button class="CTA">COMIENZA YA</button>
+        </div>
+        <img class="slide-image" src="assets/images/inicio3.png" alt="" />
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!--Site Body-->
+    <section class="shade">
+      <h2>DIETAS PERSONALIZADAS - NUTRICIONISTAS ONLINE</h2>
+      <div class="advantages">
+        <div>
+          <img class="advantages-image" src="assets/images/ventaja6.png" />
+          <p>Dieta personalizada y saludable</p>
+        </div>
+        <div>
+          <img class="advantages-image" src="assets/images/ventaja5.png" />
+          <p>Desde cualquier lugar y a tu propio ritmo</p>
+        </div>
+        <div>
+          <img class="advantages-image" src="assets/images/ventaja4.png" />
+          <p>100.000 clientes satisfechos</p>
+        </div>
+      </div>
+    </section>
+    <section class="shade">
+      <h2>VARIEDAD DE ESPECIALISTAS</h2>
+      <div class="specialists">
+        <img class="specialists-image" src="assets/images/especialistas2.png" />
+        <div>
+          <p>
+            <b
+              >Un nutricionista te acompañará durante todo el proceso, con
+              trucos de coaching y motivación.</b
+            >
+          </p>
+          <p>
+            Con nuestra consulta online, podras realizar consultas desde
+            cualquier lugar con un nutricionista de manera online por Skype,
+            meet , videollamada whatsapp o por teléfono.
+          </p>
+          <button class="CTA">PRUÉBALO GRATIS</button>
+          <div class="specialists-icons-container">
+            <img
+              class="specialists-icon"
+              src="assets/images/espe_icono1.png"
+              alt=""
+            />
+            <img
+              class="specialists-icon"
+              src="assets/images/espe_icono2.png"
+              alt=""
+            />
+            <img
+              class="specialists-icon"
+              src="assets/images/espe_icono3.png"
+              alt=""
+            />
+            <img
+              class="specialists-icon"
+              src="assets/images/espe_icono4.png"
+              alt=""
+            />
+          </div>
+          <a href="#" class="btn_especialista">PRUÉBALO GRATIS</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="shade">
+      <h2>LAS HERRAMIENTAS PARA TUS OBJETIVOS</h2>
+      <div class="tools">
+        <div>
+          <img
+            class="tools-image"
+            src="assets/images/herramienta1.png"
+            alt=""
+          />
+          <p>Control de progreso diario</p>
+        </div>
+        <div>
+          <img
+            class="tools-image"
+            src="assets/images/herramienta2.png"
+            alt=""
+          />
+          <p>Comidas saludables y personalizadas</p>
+        </div>
+        <div>
+          <img
+            class="tools-image"
+            src="assets/images/herramienta3.png"
+            alt=""
+          />
+          <p>Ejercicios mentales y corporales</p>
+        </div>
+      </div>
+    </section>
+    <section class="shade">
+      <h2>PRUEBA NUESTRAS RECETAS SALUDABLES</h2>
+      <div>
+        <div class="recipes">
+          <img class="recipes-image" src="assets/images/receta1.png" alt="" />
+          <img class="recipes-image" src="assets/images/receta2.png" alt="" />
+          <img class="recipes-image" src="assets/images/receta3.png" alt="" />
+        </div>
+        <button class="recipes-cta CTA">PRUÉBALO GRATIS</button>
+      </div>
+    </section>
+    <section class="shade">
+      <h2>PLANES DE SUSCRIPCIÓN</h2>
+      <div class="tempClass">
+        <img class="temp-image" src="assets/images/tempSub.png" alt="" />
+      </div>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

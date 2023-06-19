@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@300;500;600&display=swap");
+@font-face {
+  font-family: "solano_gothic_mvb_stdBd";
+  src: url("https://cdn.upc.edu.pe/static/static/fonts/solanogothicmvbstdbd-webfont.woff")
+    format("woff");
+}
+:root {
+  --rosa_intenso: rgb(255, 7, 110);
+  --black: #000000;
+  --light-color: #666;
+  --box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  --rosa: #f8efeaff;
+  --morado: #4a2c59ff;
+  --verde: #0eaa0eff;
+  --verde_claro: #8df900c0;
+}
+
+* {
+  font-family: "solano_gothic_mvb_stdBd", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-shadow: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: none;
+  transition: all 0.1s linear;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-padding-top: 5.5rem; /*????*/
+  scroll-behavior: smooth;
+  background: white;
+}
+.shade {
+  min-height: 400px;
+  text-align: center;
+  display: grid;
+  grid-template-rows: 10% 90%;
+  align-items: center;
+  padding: 50px 0 0 0;
+}
+
+section:nth-child(even) {
+  background: var(--rosa);
+}
+section:nth-child(even) h2 {
+  color: var(--rosa_intenso);
+}
+
+section:nth-child(odd) {
+  background: rgb(248, 225, 226);
+}
+section:nth-child(odd) h2 {
+  color: var(--verde);
+}
+
+h2,
+h3 {
+  font-size: 4.5rem;
+  font-weight: 200;
+}
+p {
+  font-size: x-large;
+}
+
+/*Header*/
+.top-nav {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+
+  width: 100%;
+  padding: 1em 4em;
+  margin: 0;
+
+  background: white;
+  z-index: 10;
+  box-shadow: var(--box-shadow);
+}
+
+.logo {
+  width: 50px;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  float: left;
+}
+
+.nav-links a {
+  display: block;
+  font-size: 2.5rem;
+  padding: 1.5rem 1.5rem;
+  margin: 0 5px;
+  color: var(--light-color);
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: var(--rosa_intenso);
+  border-bottom: 3px solid var(--rosa_intenso);
+  display: inline-block;
+}
+
+header .login-button {
+  font-size: 19px;
+  font-weight: 400;
+
+  padding: 0.5rem 1.5rem;
+  border-radius: 21px;
+
+  color: var(--rosa_intenso);
+  background: white;
+  border: 1px solid var(--rosa_intenso);
+  width: 170px;
+}
+
+header .login-button:hover {
+  color: white;
+  background: var(--rosa_intenso);
+}
+
+/*CAROUSEL*/
+.carousel {
+  margin-top: 85px;
+  height: 450px;
+  background-color: #f6c045;
+}
+
+.carousel h3 {
+  margin-bottom: 20px;
+  color: var(--rosa_intenso);
+}
+.slide {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slide-text {
+  padding: 0 15%;
+  text-align: center;
+}
+
+.slide-text p {
+  color: #ffffff;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+.CTA {
+  margin-top: 3rem;
+  font-size: 20px;
+  color: #fff;
+  background: var(--rosa_intenso);
+  border-radius: 5rem;
+  cursor: pointer;
+  padding: 0.8rem 3rem;
+  border: 1px solid var(--rosa_intenso);
+}
+
+.CTA:hover {
+  color: var(--rosa_intenso);
+  background: #fff;
+}
+
+.slide-image {
+  object-fit: cover;
+  object-position: center center;
+  width: 50%;
+  height: 450px;
+}
+
+.slide b {
+  font-size: 3rem;
+}
+
+/*Advantages*/
+
+.advantages,
+.tools,
+.recipes {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.advantages-image,
+.tools-image {
+  width: 100px;
+  height: 100px;
+}
+
+/*Specialists*/
+
+.specialists {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 10%;
+}
+
+.specialists-image {
+  width: 600px;
+}
+
+.specialists b {
+  font-size: xx-large;
+}
+.specialists-icons-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 20%;
+  margin-top: 40px;
+}
+
+.specialists-icon {
+  height: 60px;
+}
+
+/*Recipes*/
+
+.recipes {
+  padding: 0 10%;
+}
+.recipes-image {
+  width: 300px;
+  margin: 40px 0 0 0;
+}
+
+.recipes-cta {
+  margin-bottom: 30px;
+}
+
+/*TEMP Plans*/
+.tempClass {
+  padding: 1% 0 3% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
