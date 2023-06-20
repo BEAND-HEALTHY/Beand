@@ -10,10 +10,27 @@ nav .active{
     color: rgb(255, 0, 59);
 }
 
+
+
 .image-logo{
     max-width: 70px;
 }
 
 .btn{
     border-radius: 2em;
+}
+.navbar{
+    box-shadow: 2px 5px 5px rgba(255,0,59, 0.65);
+    
+    
+}
+.navbar-nav .nav-item:hover .nav-link{
+    color: rgb(255,0,59);
+}
+.navbar-nav .nav-item{
+    font-size: 22px;
+}
+
+.btn-nav{
+    font-size:larger;
 }
