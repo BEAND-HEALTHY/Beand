@@ -10,44 +10,47 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/home.css" />
     <link rel="stylesheet" href="css/footer.css" />
   </head>
-
-
+  
+  
   <body>
-    <nav class="navbar sticky-top navbar-expand-lg justify-content-center d-block">
-        <div class="container-fluid text-center px-5 py-1">
-          <a class="navbar-brand" href="#"><img src="assets/icons/beand.png" class="image-logo" alt="BEAND Logo"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-            <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Especialistas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Herramientas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Recetas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Precios</a>
-              </li>
-            </ul>
-            <button class="btn btn-outline-danger me-2" type="button">Iniciar Sesión</button>
-          </div>
-        </div>
-      </nav>
+  <nav id="navbar" class="navbar navbar-expand-md bg-body-tertiary navbar-expand-lg sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="assets/icons/beand.png" class="image-logo" alt="BEAND Logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse d-flex" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center mx-auto list-inline">
+          <li class="nav-item ">
+            <a class="nav-link active ms-3" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ms-3" href="#especialistas">Especialistas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ms-3" href="#herramientas">Herramientas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ms-3" href="#recetas">Recetas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ms-3" href="#precios">Precios</a>
+          </li>
+        </ul>
+        <button class="btn btn-outline-danger me-2" type="button">Iniciar Sesión</button>
+      </div>
+    </div>
+  </nav>
+</body>
+  
 
-
+      
 
 
 
@@ -58,6 +61,8 @@
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
           </div>
+
+
         <div class="carousel-inner">
           <div class="carousel-item container-fluid active">
             <div class="row">
@@ -104,7 +109,7 @@
 
 
 
-
+<!-- dietas personalizadas -->
 
       <div class="container-fluid text-center nutricionistas py-3">
         <h2>DIETAS PERSONALIZADAS - NUTRICIONISTAS ONLINE</h2>
@@ -123,11 +128,11 @@
         </div>
       </div>
 
+<!-- variedad de especialistas -->
 
-
-
-      <div class="container-fluid text-center py-4 especialistas">
-        <h2>VARIEDAD DE ESPECIALISTAS</h2>
+<span id="especialistas"></span>
+      <div  class="container-fluid text-center py-4 especialistas" >
+        <h2  >VARIEDAD DE ESPECIALISTAS</h2>
         <div class="row">
             <div class="col col-lg-7 p-5">
                 <h3>La nutrición adecuada es la base de una vida saludable y feliz</h3>
@@ -144,8 +149,8 @@
 
 
 
-
-      <div class="container-fluid text-center py-3 px-5 herramientas" style="background-image: url('assets/images/herramienta_fondo.jpg');">
+<!-- herramientas para uso de dietas -->
+      <div id="herramientas" class="container-fluid text-center py-3 px-5 herramientas" style="background-image: url('assets/images/herramienta_fondo.jpg');">
         <h2 class="text-herramientas">Las herramientas para tus objetiovs</h2>
         <div class="row text-center">
           <div class="col container-herramienta">
@@ -164,8 +169,8 @@
       </div>
 
 
-
-      <div class="container">
+<!-- recetas -->
+      <div id="recetas" class="container section">
         <div class="row p-5">
           <div class="col col-lg-4">
             <div class="card">
@@ -232,7 +237,7 @@
 
 
 
-<footer class="container-fluid text-center">
+<footer id="precios" class="container-fluid text-center">
   <div class="row justify-content-md-center">
       <div class="col col-lg-2 px-auto my-auto">  
           <a href="index.html">
