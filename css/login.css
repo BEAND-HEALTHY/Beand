@@ -26,3 +26,9 @@
 .myBtn{
     align-items: center;
 }
+
+ .container-her{
+    padding-left: 10em;
+    padding-right: 10em;
+    background-size: cover;
+}
