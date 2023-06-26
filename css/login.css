@@ -2,10 +2,11 @@
     max-height: 15px;
 }
 
-.modal-content {
+
+body{
     background-color: rgb(244, 229, 213);
-    border-radius: 5px;
 }
+
 
 .image-modal{
     max-width: 100%;
