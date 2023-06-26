@@ -24,11 +24,11 @@ body{
     align-items: center;
   }
 
+.especialistas-image,
 .carousel-image{
     max-height: 40vh;
     min-height: 40vh;
     min-width: 40vh;
-
 }
 
 
@@ -36,11 +36,7 @@ body{
 .container-especialistas{
     max-height: 30vh;
 }
-.especialistas-image{
-    max-height: 40vh;
-    min-height: 40vh;
-    min-width: 40vh;
-}
+
 
 .container-herramientas{
         background-size: auto;
@@ -56,10 +52,6 @@ h2{
 h3{
     font-size: large;
 }
-
-
-
-
 
 .container-nutricionistas{
     background-color: rgb(244, 229, 213);
@@ -83,10 +75,17 @@ h3{
 
 .image-receta{
     height: 200px;
+    width: 100%;
 }
 
 
 .card-text{
     font-size: 12px;
     font-weight: 100;
+}
+
+.card-receta{
+    max-width: 300px;
+    min-height: 300px;
+    padding: 0;
 }
