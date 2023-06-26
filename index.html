@@ -1,578 +1,470 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BEAND</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/navbar.css" />
-    <link rel="stylesheet" href="css/home.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/login.css" />
-  </head>
 
-  <body>
-    <nav id="navbar" class="navbar navbar-expand-lg sticky-top d-block">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#"
-          ><img
-            src="assets/icons/beand.png"
-            class="image-logo"
-            alt="BEAND Logo"
-        /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BEAND</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/login.css" />
+</head>
+
+<body>
+  <nav id="navbar" class="navbar navbar-expand-lg sticky-top d-block">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="assets/icons/beand.png" class="image-logo" alt="BEAND Logo" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#especialistas">Especialistas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#herramientas">Herramientas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#recetas">Recetas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#precios">Precios</a>
+          </li>
+        </ul>
+        <button class="btn btn-nav btn-outline-danger btn-light py-2 px-4" type="button" data-bs-toggle="modal"
+          data-bs-target="#login-modal">
+          Iniciar Sesión
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul
-            class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center mx-auto"
-          >
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Inicio</a>
+      </div>
+    </div>
+  </nav>
+
+  <!--Modal-->
+  <div class="modal" id="login-modal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <div class="row">
+            <div class="col col-lg-6 px-5">
+              <h2 class="my-3">Log in</h2>
+              <button type="button" class="btn btn-light py-auto myBtn mb-2">
+                <img src="assets/icons/google.png" class="image-modal-login" alt="..." />
+                Continuar con Google
+              </button>
+              <p>o</p>
+              <form>
+                <div class="mb-3">
+                  <input type="email" placeholder="Correo Electronico" class="form-control" id="InputEmail1"
+                    aria-describedby="emailHelp" />
+                </div>
+                <div class="mb-1">
+                  <input type="password" placeholder="Contraseña" class="form-control" id="InputPassword1" />
+                </div>
+                <p class="text-end mb-4">
+                  <a href="#">Has olvidado tu contraseña?</a>
+                </p>
+                <button type="submit" class="btn btn-danger btn-modal px-5 mb-5" data-bs-dismiss="modal">
+                  Entrar
+                </button>
+              </form>
+              <p class="mt-5">
+                No tienes una cuenta?
+                <a href="#" data-bs-toggle="modal" data-bs-target="#signup-modal">Registrate Ahora</a>
+              </p>
+            </div>
+            <div class="col col-lg-6">
+              <img src="assets/images/inicio1.png" class="image-modal" alt="..." />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="signup-modal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <div class="row">
+            <div class="col col-lg-6 px-5">
+              <h2 class="my-3">Sign up</h2>
+              <button type="button" class="btn btn-light py-auto myBtn mb-2">
+                <img src="assets/icons/google.png" class="image-modal-login" alt="..." />
+                Continuar con Google
+              </button>
+              <p>o</p>
+              <form>
+                <div class="mb-3">
+                  <input type="email" placeholder="Correo Electronico" class="form-control" id="InputEmail1"
+                    aria-describedby="emailHelp" />
+                </div>
+                <div class="mb-1">
+                  <input type="password" placeholder="Contraseña" class="form-control" id="InputPassword1" />
+                </div>
+                <div class="mb-3">
+                  <input type="password" placeholder="Confirmar Contraseña" class="form-control" id="InputPassword1" />
+                </div>
+                <button type="submit" class="btn btn-danger btn-modal mb-5" data-bs-dismiss="modal">
+                  Registrar
+                </button>
+              </form>
+              <p class="mt-5">
+                Tienes una cuenta?
+                <a href="#" data-bs-toggle="modal" data-bs-target="#login-modal">Entra Aqui</a>
+              </p>
+            </div>
+            <div class="col col-lg-6">
+              <img src="assets/images/inicio1.png" class="image-modal" alt="..." />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--Carousel-->
+  <div id="carousel-container" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+
+    <div class="carousel-inner">
+      <div class="carousel-item container-fluid  active">
+        <div class="row">
+          <div class="col col-12 col-lg-7 d-flex flex-column align-items-center py-5">
+            <h2 class="carousel-title">
+              La nutrición adecuada es la base de una vida saludable y feliz
+            </h2>
+            <p class="carousel-text">
+              En nuestra plataforma BEAND, estamos comprometidos a ayudarte a alcanzar tus objetivos y sentirte mejor contigo mismo.
+            </p>
+            <h3>
+              ¡Juntos podemos hacer que tu salud sea una prioridad!
+            </h3>
+            <button class="btn btn-danger py-2 px-4 mt-auto mb-3">
+              COMIENZA YA
+            </button>
+          </div>
+          <div class="col col-12 col-lg-5 image-container d-flex flex-column">
+              <img src="assets/images/inicio-1-600x600.png" class="img-fluid carousel-image" alt="..." />
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item container-fluid ">
+        <div class="row">
+          <div class="col col-12 col-lg-7 d-flex flex-column align-items-center py-5">
+            <h2 class="carousel-title">
+              Arma tu propio plan de alimentacion
+            </h2>
+            <p class="carousel-text">
+              Disfruta de nuestra plataforma, donde podras personalizar tus
+              dietas con recetas saludables, además de contar con una rutina
+              de actividad física.
+            </p>
+            <button class="btn btn-danger py-2 px-4 mt-auto mb-3">
+              COMIENZA YA
+            </button>
+          </div>
+          <div class="col col-12 col-lg-5 image-container d-flex flex-column">
+              <img src="assets/images/inicio-2-600x600.png" class="img-fluid carousel-image" alt="..." />
+          </div>
+        </div>
+      </div>
+      
+      <div class="carousel-item container-fluid ">
+        <div class="row">
+          <div class="col col-12 col-lg-7 d-flex flex-column align-items-center py-5">
+            <h2 class="carousel-title">
+              ¡BEAND garantiza que no estarás desamparado en el proceso de
+              cambio de tu estilo de vida y mejora de tu salud!
+            </h2>
+            <p class="carousel-text">
+              Nuestra plataforma será capaz de otorgar al usuario un plan
+              alimentario y una rutina de entrenamiento físico acertado a su
+              objetivo personal.
+            </p>
+            <button class="btn btn-danger py-2 px-4 mt-auto mb-3">
+              COMIENZA YA
+            </button>
+          </div>
+          <div class="col col-12 col-lg-5 image-container d-flex flex-column">
+              <img src="assets/images/inicio-3-600x600.png" class="img-fluid carousel-image" alt="..." />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- dietas personalizadas -->
+
+  <div class="container-fluid text-center shadow container-nutricionistas pt-4 pb-2">
+    <h2 class=" mb-4">DIETAS PERSONALIZADAS - NUTRICIONISTAS ONLINE</h2>
+    <div class="row px-5 justify-content-around">
+      <div class="col col-12 col-lg-4 my-4">
+        <img src="assets/images/ventaja-1-100x100.png" class="image-especialista" alt="..." />
+        <p class="fw-bold">Dieta personalizada y saludable</p>
+      </div>
+      <div class="col col-12 col-lg-4 my-4">
+        <img src="assets/images/ventaja-2-100x100.png" class="image-especialista" alt="..." />
+        <p class="fw-bold">Desde cualquier lugar y a tu propio ritmo</p>
+      </div>
+      <div class="col col-12 col-lg-4 my-4">
+        <img src="assets/images/ventaja-3-100x100.png" class="image-especialista" alt="..." />
+        <p class="fw-bold">100.000 clientes satisfechos</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- variedad de especialistas -->
+
+  <div class="container text-center pt-5">
+    <h2 class="">VARIEDAD DE ESPECIALISTAS</h2>
+    <div class="row">
+      <div class="col col-12 col-lg-7 d-flex flex-column align-items-center py-5">
+        <h3 class="text-center">
+          Un nutricionista te acompañara durante todo el proceso, con trucos de coaching y motivacion.
+        </h3>
+        <p class="carousel-text">
+          Con nuestra consulta online, podras realizar tus consultas desde cualquier lugar y poder personalizar recetas
+          con tu nutricionista online por Skype, Meet, Videollamada WhatsApp o por Telefono.        </p>
+        <button class="btn btn-danger py-2 px-4 mt-auto mb-3">
+          Pruebalo Gratis
+        </button>
+      </div>
+      <div class="col col-12 col-lg-5 image-container d-flex flex-column">
+          <img src="assets/images/especialistas-1-600x600.png" class="img-fluid carousel-image" alt="..." />
+      </div>
+    </div>
+  </div>
+  
+
+
+
+  <!-- herramientas para uso de dietas -->
+  <div id="herramientas" class="container-fluid text-center py-5 container-herramientas"
+    style="background-image: url('assets/images/liston-1-1920x1080.jpg'); background-position: center">
+    <h2 class="text-herramientas mb-4">Las herramientas para tus objetivos</h2>
+    <div class="row text-center justify-content-around">
+      <div class="col container-herramienta d-flex flex-column align-items-center justify-content-center">
+        <img src="assets/images/herramienta-1-100x100.png" alt="..." />
+        <p class="fw-bold">Aprende, Registra, Mejora</p>
+      </div>
+      <div class="col container-herramienta d-flex flex-column align-items-center justify-content-center">
+        <img src="assets/images/herramienta-2-100x100.png" alt="..." />
+        <p class="fw-bold">Aprende, Registra, Mejora</p>
+      </div>
+      <div class="col container-herramienta d-flex flex-column align-items-center justify-content-center">
+        <img src="assets/images/herramienta-3-100x100.png" alt="..." />
+        <p class="fw-bold">Aprende, Registra, Mejora</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- recetas -->
+  <div id="recetas" class="container">
+    <div class="row justify-content-around py-5">
+      <div class="col col-lg-3">
+        <div class="card">
+          <img src="assets/products/plato1.png" class="image-receta" alt="..." />
+          <div class="card-body">
+            <div class="row text-center">
+              <div class="col">
+                <p>15 MIN</p>
+              </div>
+              <div class="col">
+                <p>593 kcal</p>
+              </div>
+            </div>
+            <div class="mx-3">
+              <h3>Brocoli con Vinagreta</h3>
+              <p class="card-text">
+                Sin Gluten - Ricas en Proteina - Bajas en Grasa
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col col-lg-3">
+        <div class="card">
+          <img src="assets/products/plato2.png" class="image-receta" alt="..." />
+          <div class="card-body">
+            <div class="row text-center">
+              <div class="col">
+                <p>15 MIN</p>
+              </div>
+              <div class="col">
+                <p>593 kcal</p>
+              </div>
+            </div>
+            <div class="mx-3">
+              <h3>Quesadilla de desayuno</h3>
+              <p class="card-text">
+                Sin Gluten - Ricas en Proteina - Bajas en Grasa
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col col-lg-3">
+        <div class="card">
+          <img src="assets/products/plato3.png" class="image-receta" alt="..." />
+          <div class="card-body">
+            <div class="row text-center">
+              <div class="col">
+                <p>15 MIN</p>
+              </div>
+              <div class="col">
+                <p>593 kcal</p>
+              </div>
+            </div>
+            <div class="mx-3">
+              <h3>Aguacates Rellenos</h3>
+              <p class="card-text">
+                Sin Gluten - Ricas en Proteina - Bajas en Grasa
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Subscription Plans-->
+
+  <footer id="precios" class="container-fluid text-center">
+    <div class="row justify-content-md-center">
+      <div class="col col-lg-2 px-auto my-auto">
+        <a href="index.html">
+          <img src="assets/icons/beand.png" class="img-logo" alt="BEAND Logo" />
+        </a>
+        <div class="dropdown">
+          <button class="btn btn-tertiary dropdown-toggle px-4" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Español
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item active" href="#">
+                <i class="flag-spain flag"></i>
+                Español</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#especialistas">Especialistas</a>
+            <li>
+              <a class="dropdown-item" href="#">
+                <i class="flag-united-kingdom flag"></i>
+                English</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#herramientas">Herramientas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#recetas">Recetas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#precios">Precios</a>
+            <li>
+              <a class="dropdown-item" href="#">
+                <i class="flag-germany flag"></i>
+                Deutsch
+              </a>
             </li>
           </ul>
-          <button
-            class="btn btn-nav btn-outline-danger me-3 py-2 px-4"
-            type="button"
-            data-bs-toggle="modal"
-            data-bs-target="#login-modal"
-          >
-            Iniciar Sesión
-          </button>
         </div>
       </div>
-    </nav>
-    <!--Modal-->
-    <div class="modal" id="login-modal" tabindex="-1">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-          <div class="modal-body text-center">
-            <div class="row">
-              <div class="col col-lg-6 px-5">
-                <h2 class="my-3">Log in</h2>
-                <button type="button" class="btn btn-light py-auto myBtn mb-2">
-                  <img
-                    src="assets/icons/google.png"
-                    class="image-modal-login"
-                    alt="..."
-                  />
-                  Continuar con Google
-                </button>
-                <p>o</p>
-                <form>
-                  <div class="mb-3">
-                    <input
-                      type="email"
-                      placeholder="Correo Electronico"
-                      class="form-control"
-                      id="InputEmail1"
-                      aria-describedby="emailHelp"
-                    />
-                  </div>
-                  <div class="mb-1">
-                    <input
-                      type="password"
-                      placeholder="Contraseña"
-                      class="form-control"
-                      id="InputPassword1"
-                    />
-                  </div>
-                  <p class="text-end mb-4">
-                    <a href="#">Has olvidado tu contraseña?</a>
-                  </p>
-                  <button
-                    type="submit"
-                    class="btn btn-danger btn-modal px-5 mb-5"
-                    data-bs-dismiss="modal"
-                  >
-                    Entrar
-                  </button>
-                </form>
-                <p class="mt-5">
-                  No tienes una cuenta?
-                  <a
-                    href="#"
-                    data-bs-toggle="modal"
-                    data-bs-target="#signup-modal"
-                    >Registrate Ahora</a
-                  >
-                </p>
-              </div>
-              <div class="col col-lg-6">
-                <img
-                  src="assets/images/inicio1.png"
-                  class="image-modal"
-                  alt="..."
-                />
-              </div>
-            </div>
+      <div class="col col-lg-10">
+        <div class="row py-5 px-5">
+          <div class="col">
+            <h3>Publicidad</h3>
+            <a href="#">
+              <p>Features</p>
+            </a>
+            <a href="#">
+              <p>Pricing</p>
+            </a>
+          </div>
+          <div class="col mb-auto">
+            <h3>Comunidad</h3>
+            <a href="#">
+              <p>Blog</p>
+            </a>
+            <a href="#">
+              <p>User Guides</p>
+            </a>
+            <a href="#">
+              <p>Webinars</p>
+            </a>
+          </div>
+          <div class="col">
+            <h3>Company</h3>
+            <a href="#">
+              <p>About us</p>
+            </a>
+            <a href="#">
+              <p>Contact us</p>
+            </a>
+          </div>
+          <div class="col">
+            <h3>Planes y Promocion</h3>
+            <a href="#">
+              <p>Personal</p>
+            </a>
+            <a href="#">
+              <p>Startup</p>
+            </a>
+            <a href="#">
+              <p>Organization</p>
+            </a>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="modal" id="signup-modal" tabindex="-1">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-          <div class="modal-body text-center">
-            <div class="row">
-              <div class="col col-lg-6 px-5">
-                <h2 class="my-3">Sign up</h2>
-                <button type="button" class="btn btn-light py-auto myBtn mb-2">
-                  <img
-                    src="assets/icons/google.png"
-                    class="image-modal-login"
-                    alt="..."
-                  />
-                  Continuar con Google
-                </button>
-                <p>o</p>
-                <form>
-                  <div class="mb-3">
-                    <input
-                      type="email"
-                      placeholder="Correo Electronico"
-                      class="form-control"
-                      id="InputEmail1"
-                      aria-describedby="emailHelp"
-                    />
-                  </div>
-                  <div class="mb-1">
-                    <input
-                      type="password"
-                      placeholder="Contraseña"
-                      class="form-control"
-                      id="InputPassword1"
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <input
-                      type="password"
-                      placeholder="Confirmar Contraseña"
-                      class="form-control"
-                      id="InputPassword1"
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    class="btn btn-danger btn-modal mb-5"
-                    data-bs-dismiss="modal"
-                  >
-                    Registrar
-                  </button>
-                </form>
-                <p class="mt-5">
-                  Tienes una cuenta?
-                  <a
-                    href="#"
-                    data-bs-toggle="modal"
-                    data-bs-target="#login-modal"
-                    >Entra Aqui</a
-                  >
-                </p>
-              </div>
-              <div class="col col-lg-6">
-                <img
-                  src="assets/images/inicio1.png"
-                  class="image-modal"
-                  alt="..."
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="row py-1 copyright">
+      <div class="col col-lg-3"></div>
+      <div class="col col-lg-6 py-1">
+        © Healthy, inc. ·
+        <a href="#">Privacy</a>
+        ·
+        <a href="#">Terms</a>
+        ·
+        <a href="#">Startup</a>
       </div>
-    </div>
-
-    <div id="carousel-container" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
-      </div>
-
-      <div class="carousel-inner">
-        <div class="carousel-item container-fluid active">
-          <div class="row">
-            <div class="col col-lg-7 p-5">
-              <h2>
-                La nutrición adecuada es la base de una vida saludable y feliz
-              </h2>
-              <p>
-                En nuestra plataforma BEAND, estamos comprometidos a ayudarte en
-                alcanzar tus objetivos y sentirme mejor contigo mismo.
-              </p>
-              <h3>¡Juntos podemos hacer que tu salud sea una prioridad!</h3>
-            </div>
-            <div class="col col-lg-5">
-              <img
-                src="assets/images/inicio1.png"
-                class="img-fluid"
-                alt="..."
-              />
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item container-fluid">
-          <div class="row">
-            <div class="col col-lg-7 p-5">
-              <h2>Arma tu propio plan de alimentacion</h2>
-              <p>
-                Disfruta de nuestra plataforma, donde podras personalizar tus
-                dietas con recetas saludables, además de contar con una rutina
-                de actividad física.
-              </p>
-            </div>
-            <div class="col col-lg-5">
-              <img
-                src="assets/images/inicio2.png"
-                class="img-fluid"
-                alt="..."
-              />
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item container-fluid">
-          <div class="row">
-            <div class="col col-lg-7 p-5">
-              <h2>
-                ¡BEAND garantiza que no estarás desamparado en el proceso de
-                cambio de tu estilo de vida y mejora de tu salud!
-              </h2>
-              <p>
-                Nuestra plataforma será capaz de otorgar al usuario un plan
-                alimentario y una rutina de entrenamiento físico acertado a su
-                objetivo personal.
-              </p>
-            </div>
-            <div class="col col-lg-5">
-              <img
-                src="assets/images/inicio3.png"
-                class="img-fluid"
-                alt="..."
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- dietas personalizadas -->
-
-    <div class="container-fluid text-center nutricionistas py-3">
-      <h2 class="my-2">DIETAS PERSONALIZADAS - NUTRICIONISTAS ONLINE</h2>
-      <div class="row px-5">
-        <div class="col">
-          <img
-            src="assets/images/ventaja2.png"
-            class="image-especialista"
-            alt="..."
-          />
-          <p>Dieta personalizada y saludable</p>
-        </div>
-        <div class="col">
-          <img
-            src="assets/images/ventaja3.png"
-            class="image-especialista"
-            alt="..."
-          />
-          <p>Desde cualquier lugar y a tu propio ritmo</p>
-        </div>
-        <div class="col">
-          <img
-            src="assets/images/ventaja4.png"
-            class="image-especialista"
-            alt="..."
-          />
-          <p>100.000 clientes satisfechos</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- variedad de especialistas -->
-    <div class="container-fluid text-center py-4 especialistas">
-      <h2>VARIEDAD DE ESPECIALISTAS</h2>
-      <div class="row">
-        <div class="col col-lg-7 p-5">
-          <h3 class="text-center">
-            La nutrición adecuada es la base de una vida saludable y feliz.
-          </h3>
-          <p>
-            En nuestra plataforma BEAND, estamos comprometidos a ayudarte en
-            alcanzar tus objetivos y sentirme mejor contigo mismo.
-          </p>
-          <p><b>¡Juntos podemos hacer que tu salud sea una prioridad!</b></p>
-        </div>
-        <div class="col col-lg-5">
-          <img
-            src="assets/images/liston2.png"
-            class="img-fluid"
-            alt="..."
-          />
-        </div>
-      </div>
-    </div>
-
-    <!-- herramientas para uso de dietas -->
-    <div
-      id="herramientas"
-      class="container-fluid text-center py-3 herramientas container-her"
-      style="background-image: url('assets/images/liston1.png')"
-    >
-      <h2 class="text-herramientas">Las herramientas para tus objetiovs</h2>
-      <div class="row text-center px-5">
-        <div class="col container-herramienta mx-5">
-          <img src="assets/images/herramienta1.png" alt="..." />
-          <p>Aprende, Registra, Mejora</p>
-        </div>
-        <div class="col container-herramienta mx-5">
-          <img src="assets/images/herramienta2.png" alt="..." />
-          <p>Aprende, Registra, Mejora</p>
-        </div>
-        <div class="col container-herramienta mx-5">
-          <img src="assets/images/herramienta3.png" alt="..." />
-          <p>Aprende, Registra, Mejora</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- recetas -->
-    <div id="recetas" class="container">
-      <div class="row p-5">
-        <div class="col col-lg-4">
-          <div class="card">
-            <img
-              src="assets/products/plato1.png"
-              class="image-receta"
-              alt="..."
-            />
-            <div class="card-body">
-              <div class="row text-center">
-                <div class="col">
-                  <p>15 MIN</p>
-                </div>
-                <div class="col">
-                  <p>593 kcal</p>
-                </div>
-              </div>
-              <div class="mx-3">
-                <h3>Brocoli con Vinagreta</h3>
-                <p class="card-text">
-                  Sin Gluten - Ricas en Proteina - Bajas en Grasa
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col col-lg-4">
-          <div class="card">
-            <img
-              src="assets/products/plato2.png"
-              class="image-receta"
-              alt="..."
-            />
-            <div class="card-body">
-              <div class="row text-center">
-                <div class="col">
-                  <p>15 MIN</p>
-                </div>
-                <div class="col">
-                  <p>593 kcal</p>
-                </div>
-              </div>
-              <div class="mx-3">
-                <h3>Quesadilla de desayuno</h3>
-                <p class="card-text">
-                  Sin Gluten - Ricas en Proteina - Bajas en Grasa
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col col-lg-4">
-          <div class="card">
-            <img
-              src="assets/products/plato3.png"
-              class="image-receta"
-              alt="..."
-            />
-            <div class="card-body">
-              <div class="row text-center">
-                <div class="col">
-                  <p>15 MIN</p>
-                </div>
-                <div class="col">
-                  <p>593 kcal</p>
-                </div>
-              </div>
-              <div class="mx-3">
-                <h3>Aguacates Rellenos</h3>
-                <p class="card-text">
-                  Sin Gluten - Ricas en Proteina - Bajas en Grasa
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--Subscription Plans-->
-
-    <footer id="precios" class="container-fluid text-center">
-      <div class="row justify-content-md-center">
-        <div class="col col-lg-2 px-auto my-auto">
-          <a href="index.html">
-            <img
-              src="assets/icons/beand.png"
-              class="img-logo"
-              alt="BEAND Logo"
-            />
+      <div class="col col-lg-3 row socials justify-content-center">
+        <div class="col col-lg-1">
+          <a href="#">
+            <img src="assets/icons/twitter.png" alt="Twitter Logo" />
           </a>
-          <div class="dropdown">
-            <button
-              class="btn btn-tertiary dropdown-toggle px-4"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Español
-            </button>
-            <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item active" href="#">
-                  <i class="flag-spain flag"></i>
-                  Español</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">
-                  <i class="flag-united-kingdom flag"></i>
-                  English</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">
-                  <i class="flag-germany flag"></i>
-                  Deutsch
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
-        <div class="col col-lg-10">
-          <div class="row py-5 px-5">
-            <div class="col">
-              <h3>Publicidad</h3>
-              <a href="#"><p>Features</p></a>
-              <a href="#"><p>Pricing</p></a>
-            </div>
-            <div class="col mb-auto">
-              <h3>Comunidad</h3>
-              <a href="#"><p>Blog</p></a>
-              <a href="#"><p>User Guides</p></a>
-              <a href="#"><p>Webinars</p></a>
-            </div>
-            <div class="col">
-              <h3>Company</h3>
-              <a href="#"><p>About us</p></a>
-              <a href="#"><p>Contact us</p></a>
-            </div>
-            <div class="col">
-              <h3>Planes y Promocion</h3>
-              <a href="#"><p>Personal</p></a>
-              <a href="#"><p>Startup</p></a>
-              <a href="#"><p>Organization</p></a>
-            </div>
-          </div>
+        <div class="col col-lg-1">
+          <a href="#">
+            <img src="assets/icons/facebook.png" alt="Facebook Logo" />
+          </a>
+        </div>
+        <div class="col col-lg-1">
+          <a href="#">
+            <img src="assets/icons/linkedin.png" alt="LinkedIn Logo" />
+          </a>
+        </div>
+        <div class="col col-lg-1">
+          <a href="#">
+            <img src="assets/icons/youtube.png" alt="YouTube Logo" />
+          </a>
         </div>
       </div>
-      <div class="row py-1 copyright">
-        <div class="col col-lg-3"></div>
-        <div class="col col-lg-6 py-1">
-          © Healthy, inc. ·
-          <a href="#">Privacy</a>
-          ·
-          <a href="#">Terms</a>
-          ·
-          <a href="#">Startup</a>
-        </div>
-        <div class="col col-lg-3 row socials justify-content-md-center">
-          <div class="col">
-            <a href="#">
-              <img src="assets/icons/twitter.png" alt="Twitter Logo" />
-            </a>
-          </div>
-          <div class="col">
-            <a href="#">
-              <img src="assets/icons/facebook.png" alt="Facebook Logo" />
-            </a>
-          </div>
-          <div class="col">
-            <a href="#">
-              <img src="assets/icons/linkedin.png" alt="LinkedIn Logo" />
-            </a>
-          </div>
-          <div class="col">
-            <a href="#">
-              <img src="assets/icons/youtube.png" alt="YouTube Logo" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
+    </div>
+  </footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
