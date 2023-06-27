@@ -11,6 +11,9 @@
   <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
 
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../js/signup.js"></script>
+
   <link rel="stylesheet" href="../css/login.css" />
   <link rel="stylesheet" href="../css/navbar.css" />
   <link rel="stylesheet" href="../css/footer.css" />
@@ -62,18 +65,18 @@
                 Continuar con Google
               </button>
               <p>o</p>
-              <form>
+              <form id="signup-form">
                 <div class="mb-3">
-                  <input type="email" placeholder="Correo Electronico" class="form-control" id="InputEmail1"
+                  <input type="email" placeholder="Correo Electronico" class="form-control" id="username"
                     aria-describedby="emailHelp" />
                 </div>
                 <div class="mb-1">
-                  <input type="password" placeholder="Contraseña" class="form-control" id="InputPassword1" />
+                  <input type="password" placeholder="Contraseña" class="form-control" id="password" />
                 </div>
                 <div class="mb-3">
-                  <input type="password" placeholder="Confirmar Contraseña" class="form-control" id="InputPassword1" />
+                  <input type="password" placeholder="Confirmar Contraseña" class="form-control" id="confirmPassword" />
                 </div>
-                <button type="submit" class="btn btn-danger btn-modal mb-5" data-bs-dismiss="modal">
+                <button type="submit" class="btn btn-danger mb-5">
                   Registrar
                 </button>
               </form>
