@@ -15,10 +15,16 @@ body{
     height: 1.5em;
 }
 
+.review-container{
+    background-color: rgb(242, 227, 213);
+}
 .review-image{
 
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
-    height: 100%;
+}
+h1{
+    color: rgb(15, 171, 13);
+    font-weight: bold;
 }
