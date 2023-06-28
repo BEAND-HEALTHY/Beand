@@ -3,14 +3,22 @@ body{
 }
 
 
-.col{
+.col-day{
     cursor: pointer;
 }
 
-.col:hover{
+.col-day:hover{
     color: rgb(255, 0, 59);
 }
 
 .radio-image{
     height: 1.5em;
+}
+
+.review-image{
+
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
 }
