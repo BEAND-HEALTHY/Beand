@@ -10,8 +10,9 @@ nav li{
     color: rgb(144, 149, 162);
 }
 
-nav .active{
+.active{
     color: rgb(255, 0, 59);
+    font-weight: bolder;
 }
 
 
