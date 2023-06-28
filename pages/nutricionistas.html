@@ -48,9 +48,145 @@
         </div>
       </nav>
 
+      
+
+      <div class="container" id="nutricionistasContainer">
+        <h1 class=" pt-4">Nutricionistas</h1>
+
+      <div class="row text-center pt-2 pb-4 fw-bold">
+        <div class="col col-day" onclick="loadContent('monday')">Lunes</div>
+        <div class="col col-day" onclick="loadContent('tuesday')">Martes</div>
+        <div class="col col-day" onclick="loadContent('wednesday')">Miercoles</div>
+        <div class="col col-day" onclick="loadContent('thursday')">Jueves</div>
+        <div class="col col-day" onclick="loadContent('friday')">Viernes</div>
+        <div class="col col-day" onclick="loadContent('saturday')">Sabado</div>
+        <div class="col col-day" onclick="loadContent('sunday')">Domingo</div>
+      </div>
+        <div class="row justify-content-around">
+          <div class="col-md-5">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img src="../assets/images/nutricionista-m-1.jpg" class="img-nutri" alt="Foto del nutricionista" class="img-fluid">
+                        </div>
+                        <div class="col-md-7">
+                            <h5 class="card-title">Mario Fernandini</h5>
+                            <p class="card-text">Años de experiencia: 3</p>
+                            <p class="card-text">mariofernandini@gmail.com</p>
+                            <p class="card-text">Rating: 4.5/5</p>
+                            <a href="#" class="btn btn-primary" onclick="redirigirAReservas('Mario Fernandini')">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img src="../assets/images/nutricionista-m-2.jpg" class="img-nutri" class="img-fluid">
+                        </div>
+                        <div class="col-md-7">
+                            <h5 class="card-title">Juan Perez</h5>
+                            <p class="card-text">Años de experiencia: 4</p>
+                            <p class="card-text">juanperez@gmail.com</p>
+                            <p class="card-text">Rating: 4.3/5</p>
+                            <a href="#" class="btn btn-primary" onclick="redirigirAReservas('Juan Perez')">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img src="../assets/images/nutricionista-f-1.jpg" class="img-nutri" alt="Foto del nutricionista" class="img-fluid">
+                        </div>
+                        <div class="col-md-7">
+                            <h5 class="card-title">María Rodriguez</h5>
+                            <p class="card-text">Años de experiencia: 5</p>
+                            <p class="card-text">mariarodriguez@gmail.com</p>
+                            <p class="card-text">Rating: 3.8/5</p>
+                            <a href="#" class="btn btn-primary" onclick="redirigirAReservas('María Rodriguez')">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img src="../assets/images/nutricionista-f-2.jpg" class="img-nutri" alt="Foto del nutricionista" class="img-fluid">
+                        </div>
+                        <div class="col-md-7">
+                            <h5 class="card-title">Ana Torres</h5>
+                            <p class="card-text">Años de experiencia: 2</p>
+                            <p class="card-text">anatorres@gmail.com</p>
+                            <p class="card-text">Rating: 4/5</p>
+                            <a href="#" class="btn btn-primary"
+                                onclick="redirigirAReservas('Nombre Apellido')">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+        <!-- Agrega más tarjetas de nutricionistas en las columnas -->
+    </div>
+    <div class="text-center">
+      <button class="btn-down p-auto mb-4">
+          <img src="../assets/icons/down.png" alt="...">
+      </button>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script>
+        function redirigirAReservas(nombreNutricionista) {
+            var urlReservas = '4.html?nutricionista=' + encodeURIComponent(nombreNutricionista);
+            cargarPaginaReservas(urlReservas);
+        }
 
 
+        function cargarPaginaReservas(url) {
+            var reservasContainer = document.getElementById('reservasContainer');
 
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    reservasContainer.innerHTML = data;
+
+                    // Vincular los scripts necesarios para que las funcionalidades de la página de reservas funcionen
+                    var scripts = reservasContainer.getElementsByTagName('script');
+                    for (var i = 0; i < scripts.length; i++) {
+                        eval(scripts[i].innerHTML);
+                    }
+                })
+                .catch(error => console.error(error));
+
+            document.getElementById('reservasContainer').style.display = 'block';
+            document.getElementById('nutricionistasContainer').style.display = 'none';
+        }
+
+        function obtenerParametroURL(nombreParametro) {
+            var parametros = new URLSearchParams(window.location.search);
+            return parametros.get(nombreParametro);
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var mostrarReservas = obtenerParametroURL('mostrarReservas');
+
+            if (mostrarReservas === 'true') {
+                cargarPaginaReservas('4.html');
+            }
+        });
+
+    </script>
 
 
 
