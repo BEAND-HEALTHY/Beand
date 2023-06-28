@@ -28,3 +28,14 @@ h1{
     color: rgb(15, 171, 13);
     font-weight: bold;
 }
+.card{
+    height: auto;
+    width: 300px;
+}
+.card-img-top{
+    width:100%;
+    object-fit:cover;
+    object-position:center;
+    height: 100%;
+
+}
