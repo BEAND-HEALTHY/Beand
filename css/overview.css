@@ -56,3 +56,12 @@ h1{
     object-position: center;
     width: 80%;
    }
+
+   
+@media (max-width: 767px) {
+    .cheat {
+      width: 120%;
+      margin-left: -2em;
+    }
+}
+  
